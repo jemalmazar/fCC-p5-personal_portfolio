@@ -2,7 +2,13 @@
 # Global Styles & CSS Variables
 --------------------------------------------------------------*/
 
+:root {
+	--main-darkgray: #09090F;
+	--main-blue: #4882B4;
+}
+
 html {
+	font-size: 100%;
     box-sizing: border-box;
   }
   *, *:before, *:after {
@@ -72,12 +78,70 @@ table {
 # Styles
 --------------------------------------------------------------*/
 
-/* Main */
+/* Nav Bar */
 
-body {
-    background: black;
+.navbar {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	grid-gap: 1rem;
+	font-family: 'Ubuntu', sans-serif;
+	border-bottom: solid 3px var(--main-blue);
+	padding: 1rem;
 }
 
-p {
-    color: red;
+.nav-list {
+	display: grid;
+	grid-template-columns: repeat(3, 100px);
+	grid-gap: 1rem;
+	justify-items: center;
+}
+
+.logo {
+	height: auto;
+	width: 100%;
+	max-width: 3.5rem;
+}
+
+.nav-link a {
+	color: #FFF;
+	text-decoration: none;
+	/* https://dev.to/afif/100-underline-overlay-animation-the-ultimate-css-collection-4p40 */
+	background: 
+      linear-gradient(var(--main-blue) 0 0) 0 100% /var(--d, 0) 3px no-repeat;
+  	transition:0.5s;
+	padding: 0.25rem;
+}
+
+.nav-link a:hover {
+	/* https://dev.to/afif/100-underline-overlay-animation-the-ultimate-css-collection-4p40 */
+	--d: 100%;
+}
+
+/* Main */
+body {
+	background-color: var(--main-darkgray);
+}
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+/* Desktop */
+
+@media (min-width: 43em) {
+
+	.navbar{
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.logo-link {
+		justify-self: start;
+	}
+
+	.nav-list {
+		justify-self: end;
+		align-self: center;
+	}
+
 }

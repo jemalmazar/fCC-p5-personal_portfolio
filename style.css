@@ -119,17 +119,45 @@ table {
 }
 
 /* Main */
+
 body {
 	background-color: var(--main-darkgray);
+}
+
+/* Home */
+
+.home {
+	display: grid;
+	place-items: center center;
+	min-height: 100vh;
+}
+
+.home-content {
+	display: grid;
+	justify-items: center;
+	grid-gap: 0.5rem;
+	color: var(--main-blue);
+}
+
+.name {
+	font-family: 'Reem Kufi', sans-serif;
+	font-size: 2.5rem;
+}
+
+.tagline {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1.25rem;
 }
 
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
 
-/* Desktop */
+/* Tablet */
 
 @media (min-width: 43em) {
+
+	/* Nav Bar */
 
 	.navbar{
 		grid-template-columns: repeat(2, 1fr);
@@ -142,6 +170,32 @@ body {
 	.nav-list {
 		justify-self: end;
 		align-self: center;
+	}
+
+	/* Home */
+
+	.name {
+		font-size: 3.75rem;
+	}
+
+	.tagline {
+		font-size: 1.5rem;
+	}
+
+}
+
+/* Desktop */
+
+@media (min-width: 62em) {
+
+	/* Home */
+
+	.name {
+		font-size: 5rem;
+	}
+
+	.tagline {
+		font-size: 1.75rem;
 	}
 
 }

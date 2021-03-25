@@ -274,8 +274,12 @@ body {
 
 	/* Nav Bar */
 
-	.navbar{
+	.navbar {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.nav-list {
+		font-size: 1.25rem;
 	}
 
 	.logo-link {

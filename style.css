@@ -236,6 +236,34 @@ body {
 	transition: 0.5s;
 }
 
+/* Footer */
+
+.footer {
+	display: grid;
+	place-items: center center;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 0.8rem;
+	color: #FFF;
+	height: 4rem;
+	border-top: solid 3px var(--main-blue);
+}
+
+.signature a {
+	color: var(--main-blue);
+	font-weight: bold;
+	text-decoration: none;
+	/* https://dev.to/afif/100-underline-overlay-animation-the-ultimate-css-collection-4p40 */
+	background: 
+		linear-gradient(var(--main-blue) 0 0) bottom /var(--d, 0) 3px no-repeat;
+  	transition: 0.5s;
+	padding-bottom: 0.25rem;
+}
+
+.signature a:hover {
+	/* https://dev.to/afif/100-underline-overlay-animation-the-ultimate-css-collection-4p40 */
+	--d: 100%;
+}
+
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
@@ -281,6 +309,12 @@ body {
 
 	.project-title {
 		font-size: 1.25rem;
+	}
+
+	/* Footer */
+
+	.footer {
+		font-size: 1rem;
 	}
 
 }

@@ -81,6 +81,9 @@ table {
 /* Nav Bar */
 
 .navbar {
+	position: sticky; 
+	top: 0;
+	background-color: var(--main-darkgray);
 	display: grid;
 	grid-template-columns: 1fr;
 	justify-items: center;

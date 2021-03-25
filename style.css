@@ -302,11 +302,12 @@ body {
 	/* Projects */
 
 	.projects-header {
-		font-size: 4.5rem;
+		font-size: 4rem;
 	}
 
 	.projects-grid {
-		padding: 5rem;
+		grid-template-columns: repeat(2, minmax(18rem, 45rem));
+		padding: 2.5rem 5rem;
 		grid-gap: 5rem;
 	}
 

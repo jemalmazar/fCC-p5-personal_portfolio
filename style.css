@@ -199,6 +199,43 @@ body {
 }
 
 
+/* Contact */
+
+.contact {
+	display: grid;
+	place-items: center center;
+	min-height: 100vh;
+	color: #FFF;
+	text-align: center;
+}
+
+.contact-content {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 2.5rem;
+}
+
+.contact-header {
+	font-family: 'Oxygen', sans-serif;
+	font-weight: bold;
+	font-size: 2.5rem;
+}
+
+.social-icons {
+	font-size: 1.5rem;
+}
+
+.social-icons a {
+	color: #FFF;
+	padding: 0.5rem;
+	text-decoration: none;
+}
+
+.social-icons a:hover {
+	color: var(--main-blue);
+	transition: 0.5s;
+}
+
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
@@ -275,6 +312,16 @@ body {
 
 	.project-title {
 		font-size: 1.5rem;
+	}
+
+	/* Contact */
+	
+	.contact-header {
+		font-size: 4.5rem;
+	}
+
+	.social-icons {
+		font-size: 2rem;
 	}
 
 }
